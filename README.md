@@ -13,7 +13,9 @@ OpenWeather32 is designed to be a flexible DIY friendly weather and air quality 
 - QWIIC compatible (Dedicated i2c Bus-A)
 - Grove compatible (Dedicated i2c Bus-A)
 - Mosfet controlled pump or solenoid output
-- RJ-11 (or 2.54 dupoint) Rain guage and anemometer
+- RJ-11 (or 2.54 dupoint) Rain guage and anemometer inputs
+- 5 spare GPIO pins (5 support ADC functions, 2 support DAC, 3 support capacitive touch)
+
 **Supported Sensors:**
 - Supports a wide variety of temperature and humidity sensors including:
   - BME280 (Adafruit or other pin-outs)

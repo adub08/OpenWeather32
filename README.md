@@ -27,5 +27,5 @@ OpenWeather32 is designed to be a flexible DIY friendly weather and air quality 
 - AMS AS3935 Franklin Lightning Sensor [Connected via SPI]
 - Four capacitive soil moisture sensors 
 
-#Why?
+# Why?
 Although there are many other open source weather stations out there, not many are based around the ESP32 and most are just weather stations without any air quality or soil moisture sensing capabilities. There also seemed to be a huge lack of any designed around sensors supported by ESPHome I also wanted it to be flexible enough for most people's needs (which is why the variety of connector headers).

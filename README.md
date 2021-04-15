@@ -1,7 +1,7 @@
 # OpenWeather32
 Open Source ESP32 based weather and air quality station, designed around sensors supported by ESPHome
 
-![GitHub](https://img.shields.io/github/license/adub08/OpenWeather32) ![GitHub last commit](https://img.shields.io/github/last-commit/adub08/OpenWeather32) ![GitHub repo file count](https://img.shields.io/github/directory-file-count/adub08/OpenWeather32)
+![GitHub](https://img.shields.io/github/license/adub08/OpenWeather32) ![GitHub last commit](https://img.shields.io/github/last-commit/adub08/OpenWeather32)
 # What?
 OpenWeather32 is designed to be a flexible DIY friendly weather and air quality monitoring system (with many additional features!)
 
@@ -13,7 +13,7 @@ OpenWeather32 is designed to be a flexible DIY friendly weather and air quality 
 - QWIIC compatible (Dedicated i2c Bus-A)
 - Grove compatible (Dedicated i2c Bus-A)
 - Mosfet controlled pump or solenoid output
-- RJ-11 (or 2.54 dupoint) Rain guage and anemometer inputs
+- RJ-11 (or 2.54 dupoint) Rain guage and anemometer inputs **[Untested]**
 - 5 spare GPIO pins (5 support ADC functions, 2 support DAC, 3 support capacitive touch)
 
 **Supported Sensors:**
@@ -26,6 +26,11 @@ OpenWeather32 is designed to be a flexible DIY friendly weather and air quality 
 - Supports the BH1750 Ambient Light Sensor
 - AMS AS3935 Franklin Lightning Sensor [Connected via SPI]
 - Four capacitive soil moisture sensors 
+- Any QWIIC or Grove compatible sensor board
+
+**PCB Design Features**
+- All 2.54 headers placed on a 2.54mm grid for easy soldering 
+- Beginner friendly all thru hole soldering (minus the QWIIC connector)
 
 # Why?
 Although there are many other open source weather stations out there, not many are based around the ESP32 and most are just weather stations without any air quality or soil moisture sensing capabilities. There also seemed to be a huge lack of any designed around sensors supported by ESPHome I also wanted it to be flexible enough for most people's needs (which is why the variety of connector headers).

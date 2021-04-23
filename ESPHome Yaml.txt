@@ -1,0 +1,125 @@
+esphome:
+  name: YOUR_NODE_NAME
+  platform: ESP32
+  board: nodemcu-32s
+
+wifi:
+  ssid: "YOUR_SSID"
+  password: "YOUR_PASS"
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Weather Fallback Hotspot"
+    password: "MAKE_RANDOM"
+
+captive_portal:
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:
+
+# UART for SDS011
+uart:
+  rx_pin: GPIO16
+  tx_pin: GPIO17
+  baud_rate: 9600
+
+i2c:
+   - id: bus_a #Bus A - QWIIC & Grove connectors
+     sda: 13
+     scl: 04
+     scan: True
+   - id: bus_b #All Other onboard i2c sensors 
+     sda: 14
+     scl: 15
+     scan: True
+
+#SPI for AMS AS3935
+spi:
+  clk_pin: GPIO21
+  mosi_pin: GPIO22
+  miso_pin: GPIO23
+  
+#SPI for AMS AS3935  
+as3935_spi:
+  cs_pin: GPIO19 
+  irq_pin: GPIO18
+  indoor: false
+  
+sensor:
+#BME280
+  - platform: bme280
+    i2c_id: bus_b
+    temperature:
+      name: "bme280 Temperature"
+      oversampling: 16x
+    pressure:
+      name: "bme280 Pressure"
+      oversampling: 16x
+    humidity:
+      name: "bme280 Humidity"
+      oversampling: 16x
+    address: 0x77
+    update_interval: 30s
+    iir_filter: 16x
+#AS3935
+  - platform: as3935
+    lightning_energy:
+      name: "Lightning Energy"
+    distance:
+      name: "Distance Storm"
+#CCS811
+  - platform: ccs811
+    baseline: 0x6872
+    i2c_id: bus_b
+    eco2:
+      name: "CCS811 eCO2 Value"
+    tvoc:
+      name: "CCS811 Total Volatile Organic Compound"
+    address: 0x5A
+    temperature: weather_temp
+    humidity: weather_hum
+    update_interval: 60s
+#BH1750
+  - platform: bh1750
+    i2c_id: bus_b
+    name: "Weather Illuminance"
+    address: 0x23
+    measurement_time: 69
+    update_interval: 60s
+#DHT22 (AM2303)
+  - platform: dht
+    pin: 
+      number: GPIO05
+      mode: INPUT_PULLUP
+    temperature:
+      name: "Weather Temperature"
+      id: weather_temp
+    humidity:
+      name: "Weather Humidity"
+      id: weather_hum
+    update_interval: 60s
+    model: AM2302
+#SI7021    
+  - platform: htu21d
+    i2c_id: bus_b
+    temperature:
+      name: "SI7021 Temperature"
+    humidity:
+      name: "SI7021 Humidity"
+    update_interval: 60s
+  - platform: sds011
+    pm_2_5:
+      name: "Particulate Matter <2.5µm Concentration"
+    pm_10_0:
+      name: "Particulate Matter <10.0µm Concentration"
+    update_interval: 15min
+binary_sensor:
+  - platform: as3935
+    name: "Storm Alert"
+  - platform: status
+    name: "Weather station Status"

@@ -39,7 +39,7 @@ Although there are many other open source weather stations out there, not many a
 I've exported the gerbers and odb++ files for the PCB layout, to make it just upload these files to your favourite PCB fab. I made the PCB 100x100mm, 2 layers, so that it would be suitable for being produced at dirtyPCB as a prototype run.
 
 # Disclaimer:
-I have not tested all features on this PCB yet, inparticular the wind and rain meters. I also have not tested the adafruit BME280 & The SparkFun AS3935 header. **Check Board layout and if headers are suitable before use**
+I have not tested all features on this PCB yet, inparticular the wind and rain meters. I also have not tested the adafruit BME280 & The SparkFun AS3935 header. **Check Board layout and if headers are suitable before use. I Make no promises about anything being correct!**
 
 # Render & Photos:
 **Render of the Revision 1.1 board**

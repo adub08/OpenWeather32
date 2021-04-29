@@ -48,3 +48,9 @@ I have not tested all features on this PCB yet, inparticular the wind and rain m
 ![Board](https://user-images.githubusercontent.com/20442610/116514205-4acbe200-a8fd-11eb-8ee6-03e759af5f3b.jpg)
 ![Board](https://user-images.githubusercontent.com/20442610/116515415-da25c500-a8fe-11eb-9569-b1468a5386dc.jpg)
 
+# How to help:
+If you like to say thanks for the design, feel free to use my dirtypcb shares link when ordering, i make a small markup on it. 
+https://dirtypcbs.com/store/designer/details/a_dub/6520/openweather32
+In the future i may also sell single boards on Tindie. 
+
+**Enjoy!**

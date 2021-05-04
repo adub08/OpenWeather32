@@ -10,6 +10,7 @@ OpenWeather32 is designed to be a flexible DIY friendly weather and air quality 
 - Based around a NodeMCU ESP32
 - Designed to work with ESPHome
 - 5V OR 6.5 - 32V DC input (when populated with TSR12450)
+- Optional dedicated Voltage regulator for QWIIC/Grove i2c bus for a high number of QWIIC devices
 - QWIIC compatible (Dedicated i2c Bus-A)
 - Grove compatible (Dedicated i2c Bus-A)
 - Mosfet controlled pump or solenoid output
@@ -46,12 +47,14 @@ The esphome yaml config has been included but you will almost certainly need to 
 # Render & Photos:
 **Render of the Revision 1.1 board**
 ![TOP - Render](https://user-images.githubusercontent.com/20442610/116513412-1f94c300-a8fc-11eb-8c42-d6f277ac053c.PNG)
+![Bottom - Render](https://user-images.githubusercontent.com/20442610/116962627-111e2100-acd9-11eb-8ab0-24e9d59bfa34.PNG)
+
 **Photos of the Revision 1.0 board**
 ![Board](https://user-images.githubusercontent.com/20442610/116514205-4acbe200-a8fd-11eb-8ee6-03e759af5f3b.jpg)
 ![Board](https://user-images.githubusercontent.com/20442610/116515415-da25c500-a8fe-11eb-9569-b1468a5386dc.jpg)
 
 # How to help:
-If you like to say thanks for the design, feel free to use my dirtypcb shares link when ordering, i make a small markup on it. 
+If you like to say thanks for the design, feel free to use my dirtypcb shares link when ordering.
 https://dirtypcbs.com/store/designer/details/a_dub/6520/openweather32
 In the future i may also sell single boards on Tindie. 
 

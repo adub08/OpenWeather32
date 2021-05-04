@@ -10,6 +10,7 @@ OpenWeather32 is designed to be a flexible DIY friendly weather and air quality 
 - Based around a NodeMCU ESP32
 - Designed to work with ESPHome
 - 5V OR 6.5 - 32V DC input (when populated with TSR12450)
+- Optional dedicated Voltage regulator for QWIIC/Grove i2c bus for a high number of QWIIC devices
 - QWIIC compatible (Dedicated i2c Bus-A)
 - Grove compatible (Dedicated i2c Bus-A)
 - Mosfet controlled pump or solenoid output
@@ -36,20 +37,24 @@ OpenWeather32 is designed to be a flexible DIY friendly weather and air quality 
 Although there are many other open source weather stations out there, not many are based around the ESP32 and most are just weather stations without any air quality or soil moisture sensing capabilities. There also seemed to be a huge lack of any designed around sensors supported by ESPHome I also wanted it to be flexible enough for most people's needs (which is why the variety of connector headers).
 
 # How to use it?
-I've exported the gerbers and odb++ files for the PCB layout, to make it just upload these files to your favourite PCB fab. I made the PCB 100x100mm, 2 layers, so that it would be suitable for being produced at dirtyPCB as a prototype run.
+I've exported the gerbers and odb++ files for the PCB layout, to make it just upload these files to your favourite PCB fab. I made the PCB 100x100mm, 2 layers, so that it would be suitable for being produced at dirtyPCB as a prototype run. If you wish to edit the PCB i suggest using diptrace, which is what i used to make this, the PCB is well within the limitations of the free version of DipTrace. I have also included an eagle .brd but i can't speak for the usability of this file since it's exported from DipTrace.
+
+The esphome yaml config has been included but you will almost certainly need to change i2c addresses to match the individual sensor boards used along with wifi and device details.
 
 # Disclaimer:
-I have not tested all features on this PCB yet, inparticular the wind and rain meters. I also have not tested the adafruit BME280 & The SparkFun AS3935 header. **Check Board layout and if headers are suitable before use. I Make no promises about anything being correct!**
+**The Eagle file is an export from diptrace, i have no idea how good an export it is**I have not tested all features on this PCB yet, inparticular the wind and rain meters. I also have not tested the adafruit BME280 & The SparkFun AS3935 header. **Check Board layout and if headers are suitable before use. I Make no promises about anything being correct!**
 
 # Render & Photos:
 **Render of the Revision 1.1 board**
 ![TOP - Render](https://user-images.githubusercontent.com/20442610/116513412-1f94c300-a8fc-11eb-8c42-d6f277ac053c.PNG)
+![Bottom - Render](https://user-images.githubusercontent.com/20442610/116962627-111e2100-acd9-11eb-8ab0-24e9d59bfa34.PNG)
+
 **Photos of the Revision 1.0 board**
 ![Board](https://user-images.githubusercontent.com/20442610/116514205-4acbe200-a8fd-11eb-8ee6-03e759af5f3b.jpg)
 ![Board](https://user-images.githubusercontent.com/20442610/116515415-da25c500-a8fe-11eb-9569-b1468a5386dc.jpg)
 
 # How to help:
-If you like to say thanks for the design, feel free to use my dirtypcb shares link when ordering, i make a small markup on it. 
+If you like to say thanks for the design, feel free to use my dirtypcb shares link when ordering.
 https://dirtypcbs.com/store/designer/details/a_dub/6520/openweather32
 In the future i may also sell single boards on Tindie. 
 

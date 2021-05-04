@@ -36,10 +36,12 @@ OpenWeather32 is designed to be a flexible DIY friendly weather and air quality 
 Although there are many other open source weather stations out there, not many are based around the ESP32 and most are just weather stations without any air quality or soil moisture sensing capabilities. There also seemed to be a huge lack of any designed around sensors supported by ESPHome I also wanted it to be flexible enough for most people's needs (which is why the variety of connector headers).
 
 # How to use it?
-I've exported the gerbers and odb++ files for the PCB layout, to make it just upload these files to your favourite PCB fab. I made the PCB 100x100mm, 2 layers, so that it would be suitable for being produced at dirtyPCB as a prototype run.
+I've exported the gerbers and odb++ files for the PCB layout, to make it just upload these files to your favourite PCB fab. I made the PCB 100x100mm, 2 layers, so that it would be suitable for being produced at dirtyPCB as a prototype run. If you wish to edit the PCB i suggest using diptrace, which is what i used to make this, the PCB is well within the limitations of the free version of DipTrace. I have also included an eagle .brd but i can't speak for the usability of this file since it's exported from DipTrace.
+
+The esphome yaml config has been included but you will almost certainly need to change i2c addresses to match the individual sensor boards used along with wifi and device details.
 
 # Disclaimer:
-I have not tested all features on this PCB yet, inparticular the wind and rain meters. I also have not tested the adafruit BME280 & The SparkFun AS3935 header. **Check Board layout and if headers are suitable before use. I Make no promises about anything being correct!**
+**The Eagle file is an export from diptrace, i have no idea how good an export it is**I have not tested all features on this PCB yet, inparticular the wind and rain meters. I also have not tested the adafruit BME280 & The SparkFun AS3935 header. **Check Board layout and if headers are suitable before use. I Make no promises about anything being correct!**
 
 # Render & Photos:
 **Render of the Revision 1.1 board**

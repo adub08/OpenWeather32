@@ -7,8 +7,8 @@ OpenWeather32 is designed to be a flexible DIY friendly weather and air quality 
 
 # Features: 
 - DIY friendly thru-hole design with most pins labelled 
-- Based around a NodeMCU ESP32
-- Designed to work with ESPHome
+- Based around a NodeMCU ESP32 & designed to work with ESPHome
+- Battery monitoring using Vin voltage divider 
 - 5V OR 6.5 - 32V DC input (when populated with TSR12450)
 - Optional dedicated Voltage regulator for QWIIC/Grove i2c bus for a high number of QWIIC devices
 - QWIIC compatible (Dedicated i2c Bus-A)

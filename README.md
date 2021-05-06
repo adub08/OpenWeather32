@@ -41,8 +41,6 @@ I've exported the gerbers and odb++ files for the PCB layout, to make it just up
 
 The esphome yaml config has been included but you will almost certainly need to change i2c addresses to match the individual sensor boards used along with wifi and device details.
 
-# Disclaimer:
-**The Eagle file is an export from diptrace, i have no idea how good an export it is**I have not tested all features on this PCB yet, inparticular the wind and rain meters. I also have not tested the adafruit BME280 & The SparkFun AS3935 header. **Check Board layout and if headers are suitable before use. I Make no promises about anything being correct!**
 
 # Render & Photos:
 **Render of the Revision 1.1 board**
@@ -57,5 +55,8 @@ The esphome yaml config has been included but you will almost certainly need to 
 If you like to say thanks for the design, feel free to use my dirtypcb shares link when ordering.
 https://dirtypcbs.com/store/designer/details/a_dub/6520/openweather32
 In the future i may also sell single boards on Tindie. 
+
+# Disclaimer:
+**The Eagle file is an export from diptrace, i have no idea how good an export it is**I have not tested all features on this PCB yet, inparticular the wind and rain meters. I also have not tested the adafruit BME280 & The SparkFun AS3935 header. **Check Board layout and if headers are suitable before use. I Make no promises about anything being correct!**
 
 **Enjoy!**
